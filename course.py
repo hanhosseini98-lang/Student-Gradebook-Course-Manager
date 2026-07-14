@@ -1,9 +1,9 @@
 class course:
 
-    def __init__(self,course_code, course_name, students, assessments):
+    def __init__(self,course_code, course_name):
         self.course_code = course_code
         self.course_name = course_name
-        self.students = [30055678, 600200 ]
+        self.students = []
         self.assessments = []
 
 
@@ -31,11 +31,14 @@ class course:
     def display_info(self):
         print("Course Code:", self.course_code)
         print("Course Name:", self.course_name)
-        print("Enrolled Students:", self.students)
+        print("Enrolled Students:", len(self.students))
         print("Assessments:", self.assessments)
 
 
 #TESTING THE "COURSE" CLASS:
 
-course1 = course("12345", "Python Programming", [30055678], ["Quiz1: 70"])
+course1 = course("12345", "Python Programming")
+course1.add_student("10034")
+course1.add_student("100300")
+print(course1.students)
 course1.display_info()
