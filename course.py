@@ -1,4 +1,4 @@
-class course:
+class Course:
 
     def __init__(self,course_code, course_name):
         self.course_code = course_code
@@ -37,7 +37,7 @@ class course:
 
 #TESTING THE "COURSE" CLASS:
 
-course1 = course("12345", "Python Programming")
+course1 = Course("12345", "Python Programming")
 course1.add_student("10034")
 course1.add_student("100300")
 print(course1.students)
