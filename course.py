@@ -14,6 +14,14 @@ class Course:
         else:
             print("student already added!")
 
+    def remove_student(self,student_id):
+        if student_id in self.students:
+            self.students.remove(student_id)
+            print(f"{student_id} removed from course!")
+
+        else:
+            print("student not Found!")
+
 
     def add_assessment(self,assessment):
         if assessment not in self.assessments:

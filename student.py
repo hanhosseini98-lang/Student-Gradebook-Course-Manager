@@ -24,7 +24,7 @@ class Student:
             return True
 
 
-    def enroll_courses(self, course_code):
+    def enroll_course(self, course_code):
         self.courses.append(course_code)
 
     def display_info(self):
@@ -37,7 +37,7 @@ class Student:
 
 student1= Student("30055678","Hanieh Hosseini","hanhosseini98@gmail.com")
 
-student1.enroll_courses("ITI1101")
+student1.enroll_course("ITI1101")
 student1.display_info()
 
 
