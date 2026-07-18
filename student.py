@@ -31,9 +31,13 @@ class Student:
        print("Student ID:", self.id)
        print("Name:", self.name)
        print("Email:", self.email)
-       print("Courses:", self.courses)
 
-
+       if self.courses:
+           print("Courses:")
+           for course in self.courses:
+               print("-",course)
+           else:
+               print("Courses; No Courses Enrolled!")
 
 
 

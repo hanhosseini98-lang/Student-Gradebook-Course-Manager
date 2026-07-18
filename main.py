@@ -24,7 +24,7 @@ while True:
    Choose an Option:
    """)
 
-  choice = input("Chose your choice: ")
+  choice = input("Choose your Option: ")
 
   if choice == "0":
       break
@@ -67,7 +67,7 @@ while True:
       title = input("Enter Assessment title: ")
       max_score = input("Enter maximum score: ")
 
-      assessment_type = input("Enter assessment type: ")
+      assessment_type = input("Enter assessment type: ").lower()
 
       if assessment_type == "quiz":
           assessment = Quiz(title, max_score)
@@ -79,7 +79,7 @@ while True:
           print("Assessment Type Not Found!")
           continue
 
-      if gradebook.add_assessment(assessment):
+      if gradebook.add_assessment(course_code,assessment ):
           print("Assessment Added Successfully!")
       else:
           print("Assessment Type Not Found!")

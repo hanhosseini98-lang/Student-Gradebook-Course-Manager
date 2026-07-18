@@ -40,6 +40,8 @@ class Course:
         print("Course Code:", self.course_code)
         print("Course Name:", self.course_name)
         print("Enrolled Students:", len(self.students))
-        print("Assessments:", self.assessments)
+        print("Assessments:")
+        for assessment in self.assessments:
+            assessment.display_info()
 
 
