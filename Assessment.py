@@ -27,11 +27,3 @@ class Assessment:
         print("====Assessment Information====")
         print("Title:", self.title)
         print("Max Score:", self.max_score)
-
-
-#TESTING THE CODE! HOPE IT WORKS PROPERLY!
-
-quiz = Assessment("Python Quiz", 70)
-quiz.display_info()
-print(quiz.calculate_percentage(20))
-print(quiz.grade_message(30))

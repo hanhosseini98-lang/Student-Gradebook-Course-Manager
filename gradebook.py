@@ -9,6 +9,7 @@ class Gradebook:
 
     def add_student(self, student):
         self.students[student.id] = student
+        print("Student added successfully!")
 
     def add_course(self, course):
         self.courses[course.course_code] = course
@@ -124,3 +125,29 @@ class Gradebook:
         return "Failed!"
 
 
+#CREATIVE METHODS:
+
+    def get_letter_grade(self, average):
+
+        if average >= 90:
+            return "A"
+        elif average >= 80:
+            return "B"
+        elif average >= 70:
+            return "C"
+        elif average >= 60:
+            return "D"
+        else:
+            return "F"
+
+
+    def show_dashboard(self):
+        total_students = len(self.students)
+        total_courses = len(self.courses)
+
+        total_assessments = 0
+        for course in self.courses.values():
+            total_assessments += len(course.assessments)
+        print("Total Students:", total_students)
+        print("Total Courses:", total_courses)
+        print("Total Assessments:", total_assessments)

@@ -43,10 +43,3 @@ class Course:
         print("Assessments:", self.assessments)
 
 
-#TESTING THE "COURSE" CLASS:
-
-course1 = Course("12345", "Python Programming")
-course1.add_student("10034")
-course1.add_student("100300")
-print(course1.students)
-course1.display_info()

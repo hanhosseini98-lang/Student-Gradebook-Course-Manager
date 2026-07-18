@@ -4,7 +4,7 @@ class Student:
         self.id = id
         self.name = name
         self.email = email
-        self.courses = ["MAT1212"]
+        self.courses = []
 
 
     def get_id(self):
@@ -33,12 +33,7 @@ class Student:
        print("Email:", self.email)
        print("Courses:", self.courses)
 
-#TESTING THE CODES! HOPE IT WORKS PROPERLY.
 
-student1= Student("30055678","Hanieh Hosseini","hanhosseini98@gmail.com")
-
-student1.enroll_course("ITI1101")
-student1.display_info()
 
 
 
