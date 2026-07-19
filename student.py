@@ -15,14 +15,13 @@ class Student:
 
     def set_email(self, email):
 
-        if "@" not in email and "." not in email or " " in email:
-            self.email = email
+        if "@" not in email or "." not in email or " " in email:
             print("Invalid email Address!")
             return False
 
-        else:
-            print("The Email Address is updated1")
-            return True
+        self.email = email
+        print("Email updated successfully!")
+        return True
 
 
     def enroll_course(self, course_code):
@@ -37,8 +36,8 @@ class Student:
            print("Courses:")
            for course in self.courses:
                print("-",course)
-           else:
-               print("Courses; No Courses Enrolled!")
+       else:
+            print("Courses; No Courses Enrolled!")
 
 
 

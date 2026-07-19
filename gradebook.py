@@ -61,8 +61,9 @@ class Gradebook:
         if course_code not in self.grades[student_id]:
             self.grades[student_id][course_code] = {}
 
-        self.grades[student_id][course_code][assessment_title] = score
+        self.grades[student_id][course_code][assessment_title] = float(score)
         return True
+
 
     def calculate_average(self, student_id, course_code):
         if student_id not in self.students:
@@ -82,6 +83,7 @@ class Gradebook:
         average = total_score / len(self.grades[student_id][course_code])
         return round(average,2)
 
+
     def show_report(self, student_id):
         print("==== Student Report ====")
         if student_id not in self.students:
@@ -95,14 +97,14 @@ class Gradebook:
             course = self.courses[course_code]
             course.display_info()
 
-        average= self.calculate_average(student_id, course_code)
+            average= self.calculate_average(student_id, course_code)
 
-        if average is not False:
-            print("Average:", average)
-            print("Letter Grade:", self.get_letter_grade(average))
-            print("Result:", self.get_result(average))
-        else:
-            print("Average: No Grades Recorded!")
+            if average is not False:
+               print("Average:", average)
+               print("Letter Grade:", self.get_letter_grade(average))
+               print("Result:", self.get_result(average))
+            else:
+               print("Average: No Grades Recorded!")
 
 
     def search_student(self,keyword):
