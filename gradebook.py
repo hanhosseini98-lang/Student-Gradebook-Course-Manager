@@ -83,6 +83,7 @@ class Gradebook:
         return round(average,2)
 
     def show_report(self, student_id):
+        print("==== Student Report ====")
         if student_id not in self.students:
             print("Student ID not found!")
             return
@@ -93,6 +94,16 @@ class Gradebook:
         for course_code in student.courses:
             course = self.courses[course_code]
             course.display_info()
+
+        average= self.calculate_average(student_id, course_code)
+
+        if average is not False:
+            print("Average:", average)
+            print("Letter Grade:", self.get_letter_grade(average))
+            print("Result:", self.get_result(average))
+        else:
+            print("Average: No Grades Recorded!")
+
 
     def search_student(self,keyword):
 

@@ -19,6 +19,7 @@ while True:
    5. Add Assignment
    6. Record Grade
    7. View Student Report
+   8. Show Dashboard
    0. Exit
    
    Choose an Option:
@@ -100,4 +101,8 @@ while True:
   elif choice == "7":
       student_id = input("Enter your student ID: ")
       gradebook.show_report(student_id)
+
+
+  elif choice == "8":
+      gradebook.show_dashboard()
 
