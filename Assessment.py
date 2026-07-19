@@ -18,9 +18,9 @@ class Assessment:
         elif percentage >= 50:
             return "Good Job... You Passed!"
         elif percentage <= 30:
-            return "Needs Improvement!"
-        else:
             return "You Failed...!"
+        else:
+            return "Needs Improvement!"
 
 
     def display_info(self):

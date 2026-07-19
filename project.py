@@ -16,4 +16,4 @@ class Project(Assessment):
         elif percentage >= 40:
             return "Project Submitted!"
         else:
-            return "Project Not Graded!"
+            return "Project Needs Improvement!"

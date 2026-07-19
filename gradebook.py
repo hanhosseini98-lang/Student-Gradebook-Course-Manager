@@ -8,8 +8,13 @@ class Gradebook:
         self.passing_grade= passing_grade
 
     def add_student(self, student):
+        if student.id in self.students:
+            print("Student already Exists!")
+            return False
+
         self.students[student.id] = student
         print("Student added successfully!")
+        return True
 
     def add_course(self, course):
         self.courses[course.course_code] = course
@@ -55,6 +60,12 @@ class Gradebook:
         if found_assessment is None:
            return False
 
+        score = float(score)
+
+        if score < 0 or score >found_assessment.max_score:
+            print("Invalid Score!")
+            return False
+
         if student_id not in self.grades:
             self.grades[student_id] = {}
 
@@ -74,6 +85,9 @@ class Gradebook:
         if student_id not in self.grades:
             return False
         if course_code not in self.grades[student_id]:
+            return False
+
+        if len(self.grades[student_id][course_code]) == 0:
             return False
 
         total_score = 0
