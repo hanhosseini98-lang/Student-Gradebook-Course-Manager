@@ -20,6 +20,7 @@ while True:
    6. Record Grade
    7. View Student Report
    8. Show Dashboard
+   9. Search Students
    0. Exit
    
    Choose an Option:
@@ -32,10 +33,10 @@ while True:
 
 
   elif choice == "1":
-      id = input("Enter your ID: ")
+      student_id = input("Enter your ID: ")
       name = input("Enter your name: ")
       email = input("Enter your email: ")
-      student = Student(id, name, email)
+      student = Student(student_id, name, email)
       gradebook.add_student(student)
 
 
@@ -56,8 +57,8 @@ while True:
 
   elif choice == "4":
       student_id = input("Enter your student ID: ")
-      course_course = input("Enter your course Code: ")
-      if gradebook.enroll_student(student_id, course_course):
+      course_code = input("Enter your course Code: ")
+      if gradebook.enroll_student(student_id, course_code):
           print("Student Enrolled Successfully!")
       else:
           print("Enrollment Failed!")
@@ -83,7 +84,7 @@ while True:
       if gradebook.add_assessment(course_code,assessment ):
           print("Assessment Added Successfully!")
       else:
-          print("Assessment Type Not Found!")
+          print("Course Not Found!")
 
 
   elif choice == "6":
@@ -105,4 +106,12 @@ while True:
 
   elif choice == "8":
       gradebook.show_dashboard()
+
+  elif choice == "9":
+      keyword = input("Enter Student Id or Name: ")
+      student = gradebook.search_student(keyword)
+      if student:
+          student.display_info()
+      else:
+          print("Student Not Found!")
 

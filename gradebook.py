@@ -17,7 +17,12 @@ class Gradebook:
         return True
 
     def add_course(self, course):
+        if course.course_code in self.courses:
+            print("Course already Exists!")
+            return False
         self.courses[course.course_code] = course
+        print("Course added successfully!")
+        return True
 
     def enroll_student(self, student_id, course_code):
         if student_id not in self.students:
