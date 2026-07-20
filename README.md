@@ -21,6 +21,7 @@ It demonstrates the use of classes, inheritance, encapsulation, dictionaries, li
 * Generate student reports
 * Determine pass/fail results
 * look for student based on ID or name
+* Remove Student From courses
 
 ### Custom Features
 
@@ -105,6 +106,7 @@ Python concepts demonstrated:
 7. View Student Report
 8. Show Dashboard
 9. Search Student
+10. Remove Student
 0. Exit
 -------------------------------------------------------------------------------------------------
 
