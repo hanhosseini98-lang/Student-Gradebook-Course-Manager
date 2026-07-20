@@ -1,14 +1,14 @@
 class Student:
 
-    def __init__(self,student_id, name,email):
-        self.student_id = student_id
+    def __init__(self,id, name,email):
+        self.id = id
         self.name = name
-        self.email = email
+        self.email = ""
         self.courses = []
-
+        self.set_email(email)
 
     def get_id(self):
-        return self.student_id
+        return self.id
 
     def get_name(self):
        return self.name
@@ -22,7 +22,6 @@ class Student:
         self.email = email
         print("Email updated successfully!")
         return True
-
 
     def enroll_course(self, course_code):
         if course_code not in self.courses:

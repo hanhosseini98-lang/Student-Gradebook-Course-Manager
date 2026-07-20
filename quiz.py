@@ -1,7 +1,6 @@
 from Assessment import Assessment
 
 #1ST CHILD CLASS:
-
 class Quiz(Assessment):
 
     def grade_message(self, score):
@@ -15,8 +14,6 @@ class Quiz(Assessment):
             return "Keep Studying!"
         else:
             return "Needs More Practice!"
-
-
 
     def display_info(self):
         print("===== Quiz Information =====")

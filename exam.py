@@ -1,7 +1,6 @@
 from Assessment import Assessment
 
 #2ND CHILD CLASS:
-
 class Exam(Assessment):
 
     def grade_message(self, score):

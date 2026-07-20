@@ -6,7 +6,6 @@ class Course:
         self.students = []
         self.assessments = []
 
-
     def add_student(self,student_id):
         if student_id not in self.students:
             self.students.append(student_id)
@@ -21,7 +20,6 @@ class Course:
 
         else:
             print("student not Found!")
-
 
     def add_assessment(self,assessment):
         if assessment not in self.assessments:

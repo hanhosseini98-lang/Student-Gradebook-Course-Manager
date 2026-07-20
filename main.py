@@ -31,14 +31,12 @@ while True:
   if choice == "0":
       break
 
-
   elif choice == "1":
       student_id = input("Enter your ID: ")
       name = input("Enter your name: ")
       email = input("Enter your email: ")
       student = Student(student_id, name, email)
       gradebook.add_student(student)
-
 
   elif choice == "2":
       if not gradebook.students:
@@ -47,13 +45,11 @@ while True:
           for student in gradebook.students.values():
               student.display_info()
 
-
   elif choice == "3":
       course_code = input("Enter your course code: ")
       course_name = input("Enter your course name: ")
       course = Course(course_code, course_name)
       gradebook.add_course(course)
-
 
   elif choice == "4":
       student_id = input("Enter your student ID: ")
@@ -62,7 +58,6 @@ while True:
           print("Student Enrolled Successfully!")
       else:
           print("Enrollment Failed!")
-
 
   elif choice == "5":
       course_code = input("Enter course code: ")
@@ -86,7 +81,6 @@ while True:
       else:
           print("Course Not Found!")
 
-
   elif choice == "6":
       student_id = input("Enter your student ID: ")
       course_code = input("Enter your course code: ")
@@ -98,11 +92,9 @@ while True:
       else:
          print("Grade Record Not Found!")
 
-
   elif choice == "7":
       student_id = input("Enter your student ID: ")
       gradebook.show_report(student_id)
-
 
   elif choice == "8":
       gradebook.show_dashboard()

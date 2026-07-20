@@ -80,7 +80,6 @@ class Gradebook:
         self.grades[student_id][course_code][assessment_title] = float(score)
         return True
 
-
     def calculate_average(self, student_id, course_code):
         if student_id not in self.students:
             return False
@@ -101,7 +100,6 @@ class Gradebook:
 
         average = total_score / len(self.grades[student_id][course_code])
         return round(average,2)
-
 
     def show_report(self, student_id):
         print("==== Student Report ====")
@@ -125,7 +123,6 @@ class Gradebook:
             else:
                print("Average: No Grades Recorded!")
 
-
     def search_student(self,keyword):
 
         for student in self.students.values():
@@ -133,7 +130,6 @@ class Gradebook:
                 return student
 
         return None
-
 
     def delete_student(self,student_id):
         if student_id not in self.students:
@@ -156,9 +152,7 @@ class Gradebook:
 
         return "Failed!"
 
-
 #CREATIVE METHODS:
-
     def get_letter_grade(self, average):
 
         if average >= 90:
@@ -171,7 +165,6 @@ class Gradebook:
             return "D"
         else:
             return "F"
-
 
     def show_dashboard(self):
         total_students = len(self.students)
