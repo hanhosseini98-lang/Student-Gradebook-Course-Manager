@@ -145,6 +145,7 @@ class Gradebook:
             del self.grades[student_id]
 
         del self.students[student_id]
+        print("Student Deleted Successfully!")
 
     def get_result(self, average):
         if average >= self.passing_grade:

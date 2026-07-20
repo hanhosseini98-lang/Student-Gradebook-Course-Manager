@@ -21,6 +21,7 @@ while True:
    7. View Student Report
    8. Show Dashboard
    9. Search Students
+   10. Remove Student
    0. Exit
    
    Choose an Option:
@@ -106,4 +107,9 @@ while True:
           student.display_info()
       else:
           print("Student Not Found!")
+
+  elif choice == "10":
+      student_id = input("Enter your student ID: ")
+      gradebook.delete_student(student_id)
+
 
