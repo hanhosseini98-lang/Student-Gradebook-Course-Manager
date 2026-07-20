@@ -170,10 +170,10 @@ class Gradebook:
     def show_dashboard(self):
         total_students = len(self.students)
         total_courses = len(self.courses)
-
         total_assessments = 0
         for course in self.courses.values():
             total_assessments += len(course.assessments)
+
         print("Total Students:", total_students)
         print("Total Courses:", total_courses)
         print("Total Assessments:", total_assessments)

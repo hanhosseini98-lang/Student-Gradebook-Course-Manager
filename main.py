@@ -21,10 +21,9 @@ while True:
    7. View Student Report
    8. Show Dashboard
    9. Search Students
-   10. Remove Student
+  10. Remove Student
    0. Exit
    
-   Choose an Option:
    """)
 
   choice = input("Choose your Option: ")
@@ -101,7 +100,7 @@ while True:
       gradebook.show_dashboard()
 
   elif choice == "9":
-      keyword = input("Enter Student Id or Name: ")
+      keyword = input("Enter Student ID or Name: ")
       student = gradebook.search_student(keyword)
       if student:
           student.display_info()
